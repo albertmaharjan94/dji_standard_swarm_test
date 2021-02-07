@@ -2,7 +2,7 @@
 import socket
 import time
 import threading
-import cv2
+# import cv2
 from threading import Thread
 from djitellopy.decorators import accepts
 
@@ -57,19 +57,19 @@ class Tello:
     def get_udp_video_address(self):
         return 'udp://@' + self.VS_UDP_IP + ':' + str(self.VS_UDP_PORT)  # + '?overrun_nonfatal=1&fifo_size=5000'
 
-    def get_video_capture(self):
-        """Get the VideoCapture object from the camera drone
-        Returns:
-            VideoCapture
-        """
+    # def get_video_capture(self):
+    #     """Get the VideoCapture object from the camera drone
+    #     Returns:
+    #         VideoCapture
+    #     """
 
-        if self.cap is None:
-            self.cap = cv2.VideoCapture(self.get_udp_video_address())
+    #     if self.cap is None:
+    #         self.cap = cv2.VideoCapture(self.get_udp_video_address())
 
-        if not self.cap.isOpened():
-            self.cap.open(self.get_udp_video_address())
+    #     if not self.cap.isOpened():
+    #         self.cap.open(self.get_udp_video_address())
 
-        return self.cap
+    #     return self.cap
 
     def get_frame_read(self):
         """Get the BackgroundFrameRead object from the camera drone. Then, you just need to call
@@ -575,7 +575,7 @@ class BackgroundFrameRead:
     """
 
     def __init__(self, tello, address):
-        tello.cap = cv2.VideoCapture(address)
+        # tello.cap = cv2.VideoCapture(address)
         self.cap = tello.cap
 
         if not self.cap.isOpened():
