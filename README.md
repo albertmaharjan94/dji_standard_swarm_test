@@ -9,8 +9,8 @@ Although it is harder to manage, it is possible.
 ## Instruction
 1. First connect all the devices to a switch, or a singular network. Ethernet()
 2. Connect all the tello with each devices
-3. Run the server  ./server/main.py
-4. Run the client(s) ./client/main.py
+3. Run the master server  ./master/main.py
+4. Run the slave client(s) ./slave/main.py
 5. Type the commands in server
 
 ### Commands
