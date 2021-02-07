@@ -7,7 +7,7 @@ This process is tested with one Windows machine and 2 raspberry pi, all connecti
 Although it is harder to manage, it is possible.
 
 ## Instruction
-1. First connect all the devices to a switch, or a singular network. Ethernet()
+1. First connect all the devices to a switch, or a singular network. Ethernet(recommended)
 2. Connect all the tello with each devices
 3. Run the master server  ./master/main.py
 4. Run the slave client(s) ./slave/main.py
