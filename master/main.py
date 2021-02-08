@@ -126,51 +126,37 @@ while True:
             command = f"move,0,{SPEED},0,0"
         
         elif _cmd == "move_backward":
-            # left_right_velocity, forward_backward_velocity, up_down_velocity, yaw_velocity
             command = f"move,0,{-SPEED},0,0"
         
         elif _cmd == "move_up":
-            # left_right_velocity, forward_backward_velocity, up_down_velocity, yaw_velocity
             command = f"move,0,0,{SPEED},0"
         
         elif _cmd == "move_down":
-            # left_right_velocity, forward_backward_velocity, up_down_velocity, yaw_velocity
             command = f"move,0,0,{-SPEED},0"
 
         elif _cmd == "move_left":
-            # left_right_velocity, forward_backward_velocity, up_down_velocity, yaw_velocity
             command = f"move,{SPEED},0,0,0"
         
         elif _cmd == "move_right":
-            # left_right_velocity, forward_backward_velocity, up_down_velocity, yaw_velocity
             command = f"move,{-SPEED},0,0,0"
 
         elif _cmd == "rotate_left":
-            # left_right_velocity, forward_backward_velocity, up_down_velocity, yaw_velocity
             command = f"rotate_left"
         elif _cmd == "rotate_right":
-            # left_right_velocity, forward_backward_velocity, up_down_velocity, yaw_velocity
             command = f"rotate_right"
         
         elif _cmd == "flip_right":
             command = f"flip,r"
-            if takeoff == True:
-                tello.flip('r')
             
         elif _cmd == "flip_left":
             command = f"flip,l"
-            if takeoff == True:
-                tello.flip('l')
             
         elif _cmd == "flip_forward":
             command = f"flip,f"
-            if takeoff == True:
-                tello.flip('f')
-            
+
         elif _cmd == "flip_backward":
             command = f"flip,b"
-            if takeoff == True:
-                tello.flip('b')
+
         elif _cmd == "exit":
             command = None
             _socket = False
